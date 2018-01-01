@@ -2,18 +2,22 @@
 A   Baby   class and methods that use the Baby class.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jixi Wang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
+
+
+
+
     """
     After you have made the Baby class, run this module. If your Baby
     class is correct, the output of the code below should be:
 
-        Hello baby McKinley!
-        Hello baby Keegan!
-        - - - - -
+    Hello baby McKinley!
+    Hello baby Keegan!
+    - - - - -
         Baby Keegan is sleeping.
         Thank you for feeding baby McKinley.
         Baby McKinley is sleeping.
@@ -36,6 +40,7 @@ def main():
         mckinley.feed_baby()
         for j in range(4):
             mckinley.hour_passes()
+
 
 
 # ----------------------------------------------------------------------
@@ -89,6 +94,30 @@ def main():
 #          """ Brief description of what objects of the class 'are'. """
 #
 ########################################################################
+
+
+class Baby(object):
+
+    def __init__(self, baby_name):
+        self.babyname = baby_name
+        print('Hello baby', self.babyname)
+        self.call_number = 0
+
+
+
+    def feed_baby(self):
+        self.call_number = 0
+        print('Thank you for feeding baby', self.babyname)
+
+    def hour_passes(self):
+        self.call_number = self.call_number + 1
+        if self.call_number == 1:
+            print('Baby', self.babyname, 'is sleeping')
+        if self.call_number == 2:
+            print('Baby', self.babyname, 'is awake. TIme for food')
+        if self.call_number >= 3:
+            print('Baby', self.babyname, 'uncontrollably!  Feed the Baby!')
+
 
 
 
